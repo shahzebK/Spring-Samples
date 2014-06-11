@@ -1,0 +1,27 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <http>
+        <intercept-url pattern="/MovieReviewService/V1/get*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <intercept-url pattern="/MovieReviewService/V1/get*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <intercept-url pattern="/MovieReviewService/V1/submitMovie*" access="ROLE_USER" />
+        <intercept-url pattern="/MovieReviewService/V1/editMovie*" access="ROLE_USER" />
+        <intercept-url pattern="/MovieReviewService/V1/review*" access="ROLE_USER" />
+        <intercept-url pattern="/MovieReviewService/V1/login" access="ROLE_USER" />
+        <http-basic />
+        <session-management>
+            <concurrency-control max-sessions="5" />
+        </session-management>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="userAuthenticationService">
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>
