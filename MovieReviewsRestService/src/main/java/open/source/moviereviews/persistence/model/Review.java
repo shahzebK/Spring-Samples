@@ -1,6 +1,6 @@
-package open.source.gurlal.persistence.model;
+package open.source.moviereviews.persistence.model;
 
-import open.source.gurlal.domain.ReviewDTO;
+import open.source.moviereviews.domain.ReviewDTO;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

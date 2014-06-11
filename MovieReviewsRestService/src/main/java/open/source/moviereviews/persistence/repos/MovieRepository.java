@@ -1,7 +1,7 @@
-package open.source.gurlal.persistence.repos;
+package open.source.moviereviews.persistence.repos;
 
 
-import open.source.gurlal.persistence.model.Movie;
+import open.source.moviereviews.persistence.model.Movie;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.repository.CrudRepository;
 

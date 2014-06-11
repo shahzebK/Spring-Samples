@@ -1,8 +1,8 @@
-package open.source.gurlal.domain;
+package open.source.moviereviews.domain;
 
 /**
  * Created with IntelliJ IDEA.
- * User: gurlal
+ * User: moviereviews
  * Date: 5/13/14
  * Time: 1:56 PM
  * To change this template use File | Settings | File Templates.

@@ -1,13 +1,13 @@
-package open.source.gurlal.service;
+package open.source.moviereviews.service;
 
 
-import open.source.gurlal.domain.MovieDTO;
-import open.source.gurlal.domain.ReviewDTO;
-import open.source.gurlal.persistence.model.Movie;
-import open.source.gurlal.persistence.model.Review;
-import open.source.gurlal.persistence.model.User;
-import open.source.gurlal.persistence.repos.ReviewRepository;
-import open.source.gurlal.persistence.repos.MovieRepository;
+import open.source.moviereviews.domain.MovieDTO;
+import open.source.moviereviews.domain.ReviewDTO;
+import open.source.moviereviews.persistence.model.Movie;
+import open.source.moviereviews.persistence.model.Review;
+import open.source.moviereviews.persistence.model.User;
+import open.source.moviereviews.persistence.repos.ReviewRepository;
+import open.source.moviereviews.persistence.repos.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;

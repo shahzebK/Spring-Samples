@@ -1,4 +1,4 @@
-package open.source.gurlal.persistence.model;
+package open.source.moviereviews.persistence.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

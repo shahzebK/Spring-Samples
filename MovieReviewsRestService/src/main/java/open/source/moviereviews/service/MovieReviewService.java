@@ -1,8 +1,8 @@
-package open.source.gurlal.service;
+package open.source.moviereviews.service;
 
-import open.source.gurlal.domain.MovieDTO;
-import open.source.gurlal.domain.ReviewDTO;
-import open.source.gurlal.persistence.model.User;
+import open.source.moviereviews.domain.MovieDTO;
+import open.source.moviereviews.domain.ReviewDTO;
+import open.source.moviereviews.persistence.model.User;
 import org.springframework.dao.DataAccessException;
 
 import java.util.Collection;

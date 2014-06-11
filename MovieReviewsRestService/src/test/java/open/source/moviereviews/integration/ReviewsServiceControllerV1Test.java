@@ -1,8 +1,8 @@
-package open.source.gurlal.integration;
+package open.source.moviereviews.integration;
 
 
-import open.source.gurlal.domain.MovieDTO;
-import open.source.gurlal.domain.ReviewDTO;
+import open.source.moviereviews.domain.MovieDTO;
+import open.source.moviereviews.domain.ReviewDTO;
 import org.apache.commons.codec.binary.Base64;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package open.source.gurlal.domain;
+package open.source.moviereviews.domain;
 
 import java.util.ArrayList;
 import java.util.List;

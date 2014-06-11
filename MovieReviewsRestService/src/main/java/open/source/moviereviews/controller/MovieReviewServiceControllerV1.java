@@ -1,10 +1,10 @@
-package open.source.gurlal.controller;
+package open.source.moviereviews.controller;
 
-import open.source.gurlal.domain.MovieDTO;
-import open.source.gurlal.domain.ReviewDTO;
-import open.source.gurlal.persistence.model.User;
-import open.source.gurlal.service.MovieReviewService;
-import open.source.gurlal.service.UserService;
+import open.source.moviereviews.domain.MovieDTO;
+import open.source.moviereviews.domain.ReviewDTO;
+import open.source.moviereviews.persistence.model.User;
+import open.source.moviereviews.service.MovieReviewService;
+import open.source.moviereviews.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

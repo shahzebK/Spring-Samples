@@ -1,6 +1,6 @@
-package open.source.gurlal.security;
+package open.source.moviereviews.security;
 
-import open.source.gurlal.service.UserService;
+import open.source.moviereviews.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -23,7 +23,7 @@ public class UserAuthenticationService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		List<GrantedAuthority> authList = new ArrayList<GrantedAuthority>(1);
 		authList.add(new SimpleGrantedAuthority("ROLE_USER"));
-		open.source.gurlal.persistence.model.User dbUser = userService.getByUserName(username);
+		open.source.moviereviews.persistence.model.User dbUser = userService.getByUserName(username);
 		UserDetails user = new User(username, dbUser.getPassword(), true, true, true, true, authList);
 		return user;
 	}

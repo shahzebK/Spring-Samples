@@ -1,7 +1,7 @@
-package open.source.gurlal.service;
+package open.source.moviereviews.service;
 
-import open.source.gurlal.persistence.model.User;
-import open.source.gurlal.persistence.repos.UserRepository;
+import open.source.moviereviews.persistence.model.User;
+import open.source.moviereviews.persistence.repos.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -13,7 +13,7 @@
     <import resource="datasource-config.xml"/>
 
     <context:component-scan
-            base-package="open.source.gurlal"/>
+            base-package="open.source.moviereviews"/>
 
     <context:property-placeholder location="classpath:spring/data-access.properties" system-properties-mode="OVERRIDE"/>
 
@@ -26,13 +26,13 @@
                   p:database="${jpa.database}" p:showSql="${jpa.showSql}" p:generateDdl="true"/>
         </property>
         <property name="persistenceUnitName" value="moviereviews"/>
-        <property name="packagesToScan" value="open.source.gurlal"/>
+        <property name="packagesToScan" value="open.source.moviereviews"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
           p:entityManagerFactory-ref="entityManagerFactory"/>
 
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
-    <jpa:repositories base-package="open.source.gurlal.persistence.repos"/>
+    <jpa:repositories base-package="open.source.moviereviews.persistence.repos"/>
 
 </beans>
