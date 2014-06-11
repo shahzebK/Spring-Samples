@@ -13,6 +13,7 @@ CREATE TABLE users (
 CREATE TABLE movies (
   id         INTEGER IDENTITY PRIMARY KEY,
   movieName VARCHAR(100),
+  movieDescription VARCHAR(256),
   createdBy  INTEGER
 );
 

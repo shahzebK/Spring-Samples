@@ -22,6 +22,7 @@ public class Movie {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;
 	private String movieName;
+	private String movieDescription;
 	@ManyToOne
 	@JoinColumn(name = "createdBy")
 	private User createdBy;
@@ -61,26 +62,19 @@ public class Movie {
 		this.reviewSet = reviewSet;
 	}
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+	public String getMovieDescription() {
+		return movieDescription;
+	}
 
-		Movie movie = (Movie) o;
-
-		if (reviewSet != null ? !reviewSet.equals(movie.reviewSet) : movie.reviewSet != null) return false;
-		if (createdBy != null ? !createdBy.equals(movie.createdBy) : movie.createdBy != null) return false;
-		if (id != null ? !id.equals(movie.id) : movie.id != null) return false;
-		if (movieName != null ? !movieName.equals(movie.movieName) : movie.movieName != null)
-			return false;
-
-		return true;
+	public void setMovieDescription(String movieDescription) {
+		this.movieDescription = movieDescription;
 	}
 
 	public MovieDTO toDTO() {
 		MovieDTO movieDTO = new MovieDTO();
 		movieDTO.setId(this.getId());
 		movieDTO.setMovieName(this.getMovieName());
+		movieDTO.setMovieDescription(this.getMovieDescription());
 		if(this.getReviewSet() != null) {
 			for(Review review : this.getReviewSet()) {
 				movieDTO.addReview(review.toDTO());
@@ -94,5 +88,22 @@ public class Movie {
 			this.reviewSet = new HashSet<Review>();
 		}
 		this.reviewSet.add(review);
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Movie movie = (Movie) o;
+
+		if (createdBy != null ? !createdBy.equals(movie.createdBy) : movie.createdBy != null) return false;
+		if (id != null ? !id.equals(movie.id) : movie.id != null) return false;
+		if (movieDescription != null ? !movieDescription.equals(movie.movieDescription) : movie.movieDescription != null)
+			return false;
+		if (movieName != null ? !movieName.equals(movie.movieName) : movie.movieName != null) return false;
+		if (reviewSet != null ? !reviewSet.equals(movie.reviewSet) : movie.reviewSet != null) return false;
+
+		return true;
 	}
 }

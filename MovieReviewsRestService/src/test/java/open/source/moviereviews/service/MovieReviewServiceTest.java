@@ -77,7 +77,8 @@ public class MovieReviewServiceTest {
 	@Test
 	public void  getMovieWillReturnMovieById() {
 		Movie persistedMovie = new Movie();
-		persistedMovie.setMovieName("Test Movie 1 update 1?");
+		persistedMovie.setMovieName("Brave Heart");
+		persistedMovie.setMovieDescription("cast: Mel gibson");
 		persistedMovie.setId(1l);
 		persistedMovie.setCreatedBy(user1);
 
@@ -91,12 +92,14 @@ public class MovieReviewServiceTest {
 	@Test
 	public void  getAllMovieWillReturnAllMovies() {
 		Movie persistedMovie = new Movie();
-		persistedMovie.setMovieName("Test Movie 1 update 1?");
+		persistedMovie.setMovieName("Brave Heart");
+		persistedMovie.setMovieDescription("cast: Mel gibson");
 		persistedMovie.setId(1l);
 		persistedMovie.setCreatedBy(user1);
 
 		Movie persistedMovie1 = new Movie();
-		persistedMovie1.setMovieName("Test Movie 1 update 1?");
+		persistedMovie1.setMovieName("Gladiator");
+		persistedMovie1.setMovieDescription("cast: Russel");
 		persistedMovie1.setId(2l);
 		persistedMovie1.setCreatedBy(user1);
 
@@ -118,7 +121,8 @@ public class MovieReviewServiceTest {
 		reviewDTO.setReview("Review 2");
 
 		Movie persistedMovie1 = new Movie();
-		persistedMovie1.setMovieName("Test Movie 1 update 1?");
+		persistedMovie1.setMovieName("Gladiator");
+		persistedMovie1.setMovieDescription("cast: Russel");
 		persistedMovie1.setId(1l);
 		persistedMovie1.setCreatedBy(user1);
 		Review review = new Review();

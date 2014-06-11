@@ -30,6 +30,7 @@ public class MovieReviewServiceImpl implements MovieReviewService {
 		modelMovie.setId(null);
 		modelMovie.setCreatedBy(user);
 		modelMovie.setMovieName(movie.getMovieName());
+		modelMovie.setMovieDescription(movie.getMovieDescription());
 		modelMovie = movieRepository.save(modelMovie);
 		movie.setId(modelMovie.getId());
 		return movie;
@@ -40,6 +41,7 @@ public class MovieReviewServiceImpl implements MovieReviewService {
 		Movie persistedMovie = movieRepository.findOne(movie.getId());
 		if(persistedMovie != null && persistedMovie.getCreatedBy().equals(user)) {
 			persistedMovie.setMovieName(movie.getMovieName());
+			persistedMovie.setMovieDescription(movie.getMovieDescription());
 			persistedMovie = movieRepository.save(persistedMovie);
 			return movie;
 		} else {

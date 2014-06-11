@@ -7,6 +7,7 @@ import java.util.List;
 public class MovieDTO {
 	private Long id;
 	private String movieName;
+	private String movieDescription;
 	private List<ReviewDTO> reviews;
 
 	public Long getId() {
@@ -31,6 +32,14 @@ public class MovieDTO {
 
 	public void setReviews(List<ReviewDTO> reviews) {
 		this.reviews = reviews;
+	}
+
+	public String getMovieDescription() {
+		return movieDescription;
+	}
+
+	public void setMovieDescription(String movieDescription) {
+		this.movieDescription = movieDescription;
 	}
 
 	public void  addReview(ReviewDTO answer) {
